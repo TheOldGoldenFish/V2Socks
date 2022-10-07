@@ -53,7 +53,6 @@ docker build -t v2socks:local .
 docker volume create ssvol
 docker network create ssnet --subnet 192.168.100.0/24
 
-
 docker run -itd --name shadowsocks -v ssvol:/etc/shadowsocks \
 --network ssnet --ip 192.168.100.20 -p $SSPort:$SSPort v2socks:local
 
