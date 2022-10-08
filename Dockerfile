@@ -2,7 +2,7 @@ FROM shadowsocks/shadowsocks-libev
 WORKDIR /etc/shadowsocks
 COPY v2ray-plugin_linux_amd64 /etc/shadowsocks/
 COPY Shadowsocks.json /etc/shadowsocks/
-VOLUME /ect/shadowsocks
+VOLUME /etc/shadowsocks
 
 #### Port variable is defined in the script ####
 EXPOSE SSPort/tcp
