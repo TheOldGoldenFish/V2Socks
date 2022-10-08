@@ -45,7 +45,7 @@ yum install -y docker-ce
 systemctl start docker
 systemctl enable docker
 
-#### Setting Port in the Dockerfile ####
+#### Assign Port in the Dockerfile ####
 sed "s/SSPort/$SSPort/g" -i Dockerfile
 
 #### Build and run Docker image ####
