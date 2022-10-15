@@ -20,7 +20,7 @@ echo $SSDNS
 #### Creating Shadowsocks config ####
 echo -n "{
    \"server_port\":$SSPort,
-   \"password\":\"$SSPass\"
+   \"password\":\"$SSPass\",
    \"nameserver\":\"$SSDNS\"," > Shadowsocks.json
 echo '
    "server":"192.168.100.20",
