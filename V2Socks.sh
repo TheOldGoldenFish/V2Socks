@@ -31,6 +31,8 @@ echo '
    "plugin_opts":"server"
 }' >> Shadowsocks.json
 
+### Downloading prerequisites ###
+yum install -y wget
 
 #### Downloading V2ray plugin ####
 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz
@@ -53,7 +55,7 @@ docker build -t v2socks:local .
 docker volume create ssvol
 docker network create ssnet --subnet 192.168.100.0/24
 
-docker run -itd --name shadowsocks -v ssvol:/etc/shadowsocks \
+docker run -itd --name shadowsocks -v ssvol:/etc/Shadowsocks \
 --network ssnet --ip 192.168.100.20 -p $SSPort:$SSPort v2socks:local
 
 
