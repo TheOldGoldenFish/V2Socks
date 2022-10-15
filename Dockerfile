@@ -8,4 +8,4 @@ VOLUME /etc/shadowsocks
 EXPOSE SSPort/tcp
 EXPOSE SSPort/udp
 
-CMD ss-server -c /etc/shadowsocks/shadowsocks.json
+CMD ss-server -c /etc/shadowsocks/Shadowsocks.json
