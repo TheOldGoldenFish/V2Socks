@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #### Gathering input ####
-DefIP=$(hostname -I | awk '{print $1}')
+DefIP=$(curl -s https://ipecho.net/plain)
 
 read -e -p "Please Enter your ip address: " -i "$DefIP" IPAddr
 echo $IPAddr
